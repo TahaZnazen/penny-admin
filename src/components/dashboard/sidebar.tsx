@@ -15,6 +15,7 @@ import {
   LogOut,
   Menu,
   X,
+  Globe,
 } from 'lucide-react';
 import { useState } from 'react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -25,6 +26,7 @@ const navigation = [
   { name: 'Game Sessions', href: '/dashboard/sessions', icon: Gamepad2 },
   { name: 'Win History', href: '/dashboard/wins', icon: Trophy },
   { name: 'Prize Pool', href: '/dashboard/prize-pool', icon: Settings },
+  { name: 'Site Config', href: '/dashboard/site-config', icon: Globe },
   { name: 'Analytics', href: '/dashboard/analytics', icon: BarChart3 },
 ];
 

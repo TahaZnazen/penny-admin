@@ -89,3 +89,24 @@ export interface TopWinner {
   total_penny_wins: number;
   total_jackpots: number;
 }
+
+// Site Configuration
+export interface SiteConfig {
+  id: number;
+  telegram_url: string | null;
+  twitter_url: string | null;
+  dexscreener_url: string | null;
+  buy_url: string | null;
+  penny_magic_url: string | null;
+  whitepaper_url: string | null;
+  website_url: string | null;
+  contract_address: string | null;
+  penny_win_amount: number;
+  penny_win_unit: string;
+  penny_win_custom_text: string | null;
+  jackpot_amount: number;
+  jackpot_unit: string;
+  jackpot_custom_text: string | null;
+  created_at: string;
+  updated_at: string;
+}

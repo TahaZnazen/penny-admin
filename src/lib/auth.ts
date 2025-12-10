@@ -51,8 +51,12 @@ export async function clearSessionCookie(): Promise<void> {
 }
 
 export function validateCredentials(username: string, password: string): boolean {
-  const adminUsername = process.env.ADMIN_USERNAME || 'admin';
-  const adminPassword = process.env.ADMIN_PASSWORD || 'admin';
+  const adminUsername = (process.env.ADMIN_USERNAME || 'admin').trim();
+  const adminPassword = (process.env.ADMIN_PASSWORD || 'admin').trim();
 
-  return username === adminUsername && password === adminPassword;
+  // Trim input values as well
+  const inputUsername = username.trim();
+  const inputPassword = password.trim();
+
+  return inputUsername === adminUsername && inputPassword === adminPassword;
 }
